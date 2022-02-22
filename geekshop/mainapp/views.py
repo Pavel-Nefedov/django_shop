@@ -7,7 +7,7 @@ from mainapp.models import ProductCategory, Product
 #link_menu заменил на categories
 def products(request):
     title = 'каталог'
-    categories = ProductCategory.objects.all()[::-1]# список наоборот
+    categories = ProductCategory.objects.all()
     # links_menu = [
     #     {'href': 'products_all', 'name': 'все'},
     #     {'href': 'products_home', 'name': 'дом'},
