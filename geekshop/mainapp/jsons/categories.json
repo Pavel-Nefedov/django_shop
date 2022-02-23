@@ -1,23 +1,23 @@
 [
   {
-      "name": "Сад",
+      "name": "Все",
       "description": "пап"
-
   },
   {
-      "name": "Огород",
+      "name": "Дом",
       "description": "вав"
-
   },
   {
 
-      "name": "Дача",
+      "name": "Офис",
       "description": "ппп"
-
   },
   {
-      "name": "Деревня",
+      "name": "Модерн",
       "description": "ааа"
-
+  },
+  {
+      "name": "Классика",
+      "description": "ааа"
   }
 ]
