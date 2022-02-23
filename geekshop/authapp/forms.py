@@ -1,5 +1,6 @@
 from django.contrib.auth.forms import AuthenticationForm, UserCreationForm, UserChangeForm
 from django import forms
+from django.core.exceptions import ValidationError
 
 from authapp.models import ShopUser
 
@@ -13,6 +14,7 @@ class ShopUserLoginForm(AuthenticationForm):
         super(ShopUserLoginForm, self).__init__(*args, **kwargs)
         for field_name, field in self.fields.items():
             field.widget.attrs['class'] = 'form-control'
+
 
 
 class ShopUserRegisterForm(UserCreationForm):
@@ -49,5 +51,14 @@ class ShopUserEditForm(UserChangeForm):
         data = self.cleaned_data['age']
         if data < 18:
             raise forms.ValidationError("Вы слишком молоды!")
+        elif data >= 128:
+            raise forms.ValidationError("Вы как до стольки дожили??? Укажите возрасть поменьше")
 
         return data
+
+    def clean_username(self):
+        username = self.cleaned_data['username']
+        if len(username) > 64:
+            raise ValidationError('Длинна превышает 64 символа')
+
+        return username
