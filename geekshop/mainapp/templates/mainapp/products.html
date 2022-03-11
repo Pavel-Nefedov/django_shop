@@ -22,12 +22,12 @@
                 </a>
             </li>
             {% for category in categories %}
-                <li>
-                    <a href="{% url 'products:category' category.pk %}"
-                        class="{% if request.resolver_match.kwargs.pk|add:'0' == category.pk %} active {% endif %}">
+            <li>
+                <a href="{% url 'products:category' category.pk %}"
+                   class="{% if request.resolver_match.kwargs.pk|add:'0' == category.pk %} active {% endif %}">
                     {{category.name}}
-                    </a>
-                </li>
+                </a>
+            </li>
             {% endfor %}
         </ul>
     </div>
@@ -72,12 +72,32 @@
     <div class="product_list">
         <div class="title clearfix">
             {% if category %}
-                <h2>
-                    Категория: "{{ category.name|title }}"
-                </h2>
+            <h2>
+                Категория: "{{ category.name|title }}"
+            </h2>
             {% endif %}
         </div>
         <div class="related-products clearfix">
+
+
+            <div class="paginator">
+                {% if products.has_previous %}
+                    <a href="{% url 'products:page' category.pk products.previous_page_number %}">
+                        <
+                    </a>
+                {% endif %}
+                <span class="current">
+                    страница {{ products.number }} из
+                    {{ products.paginator.num_pages }}
+                </span>
+                {% if products.has_next %}
+                    <a href="{% url 'products:page' category.pk products.next_page_number %}">
+                        >
+                    </a>
+                {% endif %}
+            </div>
+
+
             {% for product in products %}
             <div class="block w-25">
                 <a href="{% url 'mainapp:detail' pk=product.pk %}">
@@ -100,15 +120,15 @@
         </div>
         <div class="related-products clearfix">
             {% for product in same_products %}
-                <div class="block">
-                    <a href="{% url 'mainapp:detail' pk=product.pk %}"><img src="/media/{{ product.image }}" alt="">
-                        <div class="text">
-                            <img src="{% static '/geekshop/img/icon-hover.png' %}" alt="img">
-                            <h4>{{ product.name }}</h4>
-                            <p>{{ product.description }}</p>
-                        </div>
-                    </a>
-                </div>
+            <div class="block">
+                <a href="{% url 'mainapp:detail' pk=product.pk %}"><img src="/media/{{ product.image }}" alt="">
+                    <div class="text">
+                        <img src="{% static '/geekshop/img/icon-hover.png' %}" alt="img">
+                        <h4>{{ product.name }}</h4>
+                        <p>{{ product.description }}</p>
+                    </div>
+                </a>
+            </div>
             {% endfor %}
         </div>
     </div>
