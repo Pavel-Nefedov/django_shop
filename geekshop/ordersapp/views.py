@@ -12,6 +12,10 @@ from ordersapp.forms import OrderItemForm
 from ordersapp.models import Order, OrderItem
 
 
+def is_ajax(self):
+  return self.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
+
+
 class OrderList(ListView):
     model = Order
 
@@ -36,9 +40,11 @@ class OrderCreate(CreateView):
                 formset = OrderFormSet()
                 for num, form in enumerate(formset.forms):
                     form.initial['product'] = basket_items[num].product
-                    form.initial['quantity'] = basket_items[num].quantiti
+                    form.initial['quantity'] = basket_items[num].quantity
                     form.initial['price'] = basket_items[num].product.price
-                basket_items.delete()
+                    basket_items[num].delete()
+                # basket_items.delete()
+
             else:
                 formset = OrderFormSet()
 
@@ -116,22 +122,21 @@ def order_forming_complete(request, pk):
 
     return HttpResponseRedirect(reverse('ordersapp:orders_list'))
 
-
 @receiver(pre_save, sender=OrderItem)
 @receiver(pre_save, sender=Basket)
 def product_quantity_update_save(sender, update_fields, instance, **kwargs):
-    if update_fields is 'quantiti' or 'product':
+    if update_fields is 'quantity' or 'product':
         if instance.pk:
-            instance.product.qantity -= instance.quantiti - sender.get_item(instance.pk).quantiti
+            instance.product.quantity -= instance.quantity - sender.get_item(instance.pk).quantity
         else:
-            instance.product.qantity -= instance.quantiti
+            instance.product.quantity -= instance.quantity
         instance.product.save()
 
 
 @receiver(pre_delete, sender=OrderItem)
 @receiver(pre_delete, sender=Basket)
 def product_quantity_update_delete(sender, instance, **kwargs):
-    instance.product.qantity += instance.quantiti
+    instance.product.quantity += instance.quantity
     instance.product.save()
 
 

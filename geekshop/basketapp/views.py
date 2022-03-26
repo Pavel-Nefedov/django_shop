@@ -31,7 +31,7 @@ def basket_add(request, pk):
     if not basket:
         basket = Basket(user=request.user, product=product)
 
-    basket.quantiti += 1
+    basket.quantity += 1
     basket.save()
 
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
@@ -45,13 +45,13 @@ def basket_remove(request, pk):
 
 
 @login_required
-def basket_edit(request, pk, quantiti):
+def basket_edit(request, pk, quantity):
     if request.is_ajax():
-        quantiti = int(quantiti)
+        quantity = int(quantity)
         new_basket_item = Basket.objects.get(pk=int(pk))
 
-        if quantiti > 0:
-            new_basket_item.quantiti = quantiti
+        if quantity > 0:
+            new_basket_item.quantity = quantity
             new_basket_item.save()
         else:
             new_basket_item.delete()

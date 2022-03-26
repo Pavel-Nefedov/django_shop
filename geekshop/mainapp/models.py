@@ -40,7 +40,7 @@ class Product(models.Model):
         decimal_places=2,
         default=0,
     )
-    qantity = models.PositiveIntegerField(
+    quantity = models.PositiveIntegerField(
         verbose_name='Количество на складе',
         default=0,
     )
