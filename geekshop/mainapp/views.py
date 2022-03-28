@@ -82,12 +82,3 @@ def product(request, pk):
     }
 
     return render(request, 'mainapp/product_detail.html', content)
-
-# def product(request, pk):
-#     title = 'продукты'
-#
-#     content = {
-#         'title': title,
-#         'links_menu': ProductCategory.objects.all(),
-#         'product': get_object_or_404(Product, pk=pk),
-
