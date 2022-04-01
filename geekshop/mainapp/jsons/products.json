@@ -6,7 +6,7 @@
       "short_desc": "Удобный",
       "description": "Удобный",
       "price": "4500.00",
-      "qantity": 20
+      "quantity": 20
 
   },
   {
@@ -17,7 +17,7 @@
       "short_desc": "Уникальный дизайн",
       "description": "удобство",
       "price": "3500.00",
-      "qantity": 15
+      "quantity": 15
 
   },
   {
@@ -28,7 +28,7 @@
       "short_desc": "Удобство",
       "description": "Очень Хороший стул",
       "price": "5000.00",
-      "qantity": 8
+      "quantity": 8
 
   },
   {
@@ -39,7 +39,7 @@
       "short_desc": "Лампочка",
       "description": "Нужная вещь",
       "price": "6000.00",
-      "qantity": 9
+      "quantity": 9
 
   },
   {
@@ -49,7 +49,7 @@
       "short_desc": "да он удобный",
       "description": "хороший",
       "price": "50000.00",
-      "qantity": 8
+      "quantity": 8
 
   }
 ]
