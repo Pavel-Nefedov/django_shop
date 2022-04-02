@@ -4,6 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from basketapp.models import Basket
 from mainapp.models import ProductCategory, Product
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.views.decorators.cache import cache_page
 
 
 def get_hot_product():
@@ -16,7 +17,7 @@ def get_same_products(hot_product):
     same_products = Product.objects.filter(category=hot_product.category).exclude(pk=hot_product.pk)
     return same_products
 
-
+@cache_page(3600)
 def products(request, pk=None, page=1):
     title = 'каталог'
     categories = ProductCategory.objects.all()
