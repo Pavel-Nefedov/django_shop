@@ -1,0 +1,293 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2022-04-01T18:54:17.009Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "1",
+      "object_repr": "���",
+      "action_flag": 3,
+      "change_message": ""
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2022-04-03T11:27:18.884Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "2",
+      "object_repr": "���",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2022-04-03T11:28:00.020Z",
+      "user": 1,
+      "content_type": 6,
+      "object_id": "2",
+      "object_repr": "���",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Is active\"]}}]"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "hxtbxrz4xt4l0hd3ak88rl3klm2hfkzz",
+    "fields": {
+      "session_data": ".eJxVjEEOgjAQRe_StWmYTmmpS_ecgUxnWosaSCisjHcXEha6_e-9_1YDbWsZtpqWYRR1VaAuv1skfqbpAPKg6T5rnqd1GaM-FH3SqvtZ0ut2un8HhWrZa4Omc4wWDPomtIjQgsuhC2RYbBRuIHgktkaycx4y7yw5AbLB7rL6fAGjkTaL:1naDTW:-30YwOfy2xV5qfKPZRLcV0tF2EugK1O663Me_HxsUiQ",
+      "expire_date": "2022-04-15T09:21:46.470Z"
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 2,
+    "fields": {
+      "name": "���",
+      "description": "���",
+      "created": "2022-03-31T19:24:57.280Z",
+      "updated": "2022-04-03T11:27:59.988Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 3,
+    "fields": {
+      "name": "����",
+      "description": "���",
+      "created": "2022-03-31T19:24:57.283Z",
+      "updated": "2022-04-03T11:29:43.348Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 4,
+    "fields": {
+      "name": "������",
+      "description": "���",
+      "created": "2022-03-31T19:24:57.283Z",
+      "updated": "2022-03-31T19:24:57.283Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.productcategory",
+    "pk": 5,
+    "fields": {
+      "name": "��������",
+      "description": "���",
+      "created": "2022-03-31T19:24:57.298Z",
+      "updated": "2022-03-31T19:24:57.298Z",
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 1,
+    "fields": {
+      "category": 2,
+      "name": "���� ���������",
+      "image": "products_images/product-1.jpg",
+      "short_desc": "�������",
+      "description": "�������",
+      "price": "4500.00",
+      "quantity": 16,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 2,
+    "fields": {
+      "category": 3,
+      "name": "�����",
+      "image": "products_images/product-2.jpg",
+      "short_desc": "���������� ������",
+      "description": "��������",
+      "price": "3500.00",
+      "quantity": 14,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 3,
+    "fields": {
+      "category": 4,
+      "name": "������",
+      "image": "products_images/product-4.jpg",
+      "short_desc": "��������",
+      "description": "����� ������� ����",
+      "price": "5000.00",
+      "quantity": 6,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 4,
+    "fields": {
+      "category": 2,
+      "name": "�����",
+      "image": "products_images/product-3-sm.jpg",
+      "short_desc": "��������",
+      "description": "������ ����",
+      "price": "6000.00",
+      "quantity": 8,
+      "is_active": true
+    }
+  },
+  {
+    "model": "mainapp.product",
+    "pk": 5,
+    "fields": {
+      "category": 2,
+      "name": "�����",
+      "image": "products_images/product-31.jpg",
+      "short_desc": "�� �� �������",
+      "description": "�������",
+      "price": "50000.00",
+      "quantity": 7,
+      "is_active": true
+    }
+  },
+  {
+    "model": "authapp.shopuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$216000$Q7F0hFRBimQw$nPZAGXnY1Cf5wyAKmaEjVMipRO3weCDC9TbE49VCPrM=",
+      "last_login": "2022-04-01T09:21:46.252Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "objects@mail.ru",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2022-03-31T19:24:57.350Z",
+      "avatar": "",
+      "age": 30,
+      "activation_key": "",
+      "activation_key_expires": "2022-04-02T19:24:57.098Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "authapp.shopuserprofile",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "tagline": "",
+      "about_me": "",
+      "gender": ""
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "created": "2022-04-01T18:04:58.202Z",
+      "updated": "2022-04-01T18:48:40.099Z",
+      "status": "FM",
+      "is_active": false
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 2,
+    "fields": {
+      "user": 1,
+      "created": "2022-04-01T18:48:48.843Z",
+      "updated": "2022-04-01T18:50:41.691Z",
+      "status": "FM",
+      "is_active": false
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 3,
+    "fields": {
+      "user": 1,
+      "created": "2022-04-02T07:40:09.619Z",
+      "updated": "2022-04-02T07:40:09.909Z",
+      "status": "FM",
+      "is_active": false
+    }
+  },
+  {
+    "model": "ordersapp.order",
+    "pk": 4,
+    "fields": {
+      "user": 1,
+      "created": "2022-04-02T07:40:23.981Z",
+      "updated": "2022-04-02T07:40:24.288Z",
+      "status": "FM",
+      "is_active": true
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "product": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "product": 4,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 3,
+    "fields": {
+      "order": 1,
+      "product": 5,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 4,
+    "fields": {
+      "order": 1,
+      "product": 1,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 10,
+    "fields": {
+      "order": 4,
+      "product": 1,
+      "quantity": 1
+    }
+  },
+  {
+    "model": "ordersapp.orderitem",
+    "pk": 11,
+    "fields": {
+      "order": 4,
+      "product": 3,
+      "quantity": 1
+    }
+  }
+]
